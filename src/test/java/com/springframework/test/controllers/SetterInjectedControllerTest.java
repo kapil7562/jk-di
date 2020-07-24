@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.springframework.controllers.SetterInjectedController;
-import com.springframework.services.GreetingService;
+import com.springframework.services.PropertyGreetingService;
 
 public class SetterInjectedControllerTest {
 	
@@ -13,7 +13,7 @@ public class SetterInjectedControllerTest {
 	@BeforeEach
 	void setUp() {
 		controller = new SetterInjectedController();
-		controller.setGreeting(new GreetingService());
+		controller.setGreeting(new PropertyGreetingService());
 	}
 	
 	@Test
