@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 import com.springframework.controllers.ContructorInjectedController;
+import com.springframework.controllers.I18NController;
 import com.springframework.controllers.MyController;
 import com.springframework.controllers.PropertyInjectedController;
 import com.springframework.controllers.SetterInjectedController;
@@ -16,6 +17,11 @@ public class JkDiApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(JkDiApplication.class, args);
+		
+		I18NController i18nController = ctx.getBean(I18NController.class);
+		
+		System.out.println(i18nController.sayGreeting());
+		
 		MyController myCotroller = ctx.getBean(MyController.class);
 		System.out.println(myCotroller.sayHello());
 		

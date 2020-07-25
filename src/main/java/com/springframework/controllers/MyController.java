@@ -2,11 +2,23 @@ package com.springframework.controllers;
 
 import org.springframework.stereotype.Controller;
 
+import com.springframework.services.PrimaryGreetingService;
+
 @Controller
 public class MyController {
 	
+	private PrimaryGreetingService greetingService;
+	
+	
+	
+	public MyController(PrimaryGreetingService greetingService) {
+		super();
+		this.greetingService = greetingService;
+	}
+
+
+
 	public String sayHello() {
-		System.out.println("Hello World");
-		return "Hi Folks!!!";
+		return greetingService.sayGreeting();
 	}
 }
