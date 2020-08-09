@@ -2,16 +2,16 @@ package com.springframework.controllers;
 
 import org.springframework.stereotype.Controller;
 
-import com.springframework.services.PrimaryGreetingService;
+import com.springframework.services.IGreetingService;
 
 @Controller
 public class MyController {
 	
-	private PrimaryGreetingService greetingService;
+	private IGreetingService greetingService;
 	
 	
 	
-	public MyController(PrimaryGreetingService greetingService) {
+	public MyController(IGreetingService greetingService) {
 		super();
 		this.greetingService = greetingService;
 	}

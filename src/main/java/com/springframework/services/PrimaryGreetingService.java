@@ -10,7 +10,7 @@ public class PrimaryGreetingService implements IGreetingService{
 	@Override
 	public String sayGreeting() {
 		
-		return "Hello World !!! - From the Primary Bean";
+		return "Hello World !!! - From the Primary Bean Updated";
 	}
 
 }
